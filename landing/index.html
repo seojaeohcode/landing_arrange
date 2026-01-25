@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A!rrange - 스마트 북마크 관리</title>
+    <meta name="description" content="북마크를 자동으로 정리하고 분류하는 크롬 확장 프로그램. 스마트 제목 생성, 자동 카테고리 분류, 사용 통계 제공.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-background"></div>
+    
+    <nav class="navbar">
+        <div class="logo-section">
+            <img src="logo.png" alt="A!rrange Logo" class="ai-logo">
+            <span class="app-title">A!rrange</span>
+        </div>
+        <a href="https://chrome.google.com/webstore" target="_blank" class="cta-button header-cta">
+            <span class="chrome-icon">🌐</span>
+            <span>Chrome에 추가</span>
+        </a>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <div class="badge">북마크 관리의 새로운 방식</div>
+            <h1 class="hero-title">북마크를<br><span class="gradient-text">스마트하게</span> 정리하세요</h1>
+            <p class="hero-subtitle">수백 개의 북마크로 지친가요?<br>A!rrange가 자동으로 제목을 최적화하고,<br>관련 북마크를 묶어주며, 사용 통계까지 제공합니다.</p>
+            <div class="hero-buttons">
+                <a href="https://chrome.google.com/webstore" target="_blank" class="cta-button primary">Chrome에 추가 - 무료</a>
+                <a href="#how-it-works" class="cta-button secondary">사용 방법</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <!-- 실제 UI를 반영한 프리뷰 -->
+            <div class="ui-card glass-card float-animation">
+                <div class="ui-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="bookmark-list">
+                    <div class="category-header">
+                        <span class="folder-icon">📁</span> 웹 개발
+                    </div>
+                    <div class="bookmark-item">
+                        <div class="fill-bar" style="width: 85%"></div>
+                        <div class="bm-content">
+                            <div class="bm-title">React 공식 문서</div>
+                            <div class="bm-url">react.dev</div>
+                        </div>
+                        <div class="visit-count">12</div>
+                    </div>
+                    <div class="bookmark-item">
+                        <div class="fill-bar" style="width: 60%"></div>
+                        <div class="bm-content">
+                            <div class="bm-title">TypeScript 가이드</div>
+                            <div class="bm-url">typescriptlang.org</div>
+                        </div>
+                        <div class="visit-count">8</div>
+                    </div>
+                    <div class="category-header" style="margin-top: 16px;">
+                        <span class="folder-icon">📁</span> 디자인
+                    </div>
+                    <div class="bookmark-item">
+                        <div class="fill-bar" style="width: 45%"></div>
+                        <div class="bm-content">
+                            <div class="bm-title">Figma 튜토리얼</div>
+                            <div class="bm-url">figma.com</div>
+                        </div>
+                        <div class="visit-count">5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features-section">
+        <h2 class="section-title">주요 기능</h2>
+        <div class="features-grid">
+            <div class="feature-card glass-card">
+                <div class="icon-box">✏️</div>
+                <h3>스마트 제목 생성</h3>
+                <p>긴 제목을 간결하고 검색하기 좋게 자동 변환합니다. 핵심 키워드는 유지한 채 읽기 쉽게 다듬어 줍니다.</p>
+            </div>
+            <div class="feature-card glass-card">
+                <div class="icon-box">📂</div>
+                <h3>자동 카테고리 분류</h3>
+                <p>폴더를 직접 만들 필요 없이, 관련 북마크끼리 알아서 묶어 줍니다. 정리가 한결 수월해집니다.</p>
+            </div>
+            <div class="feature-card glass-card">
+                <div class="icon-box">📈</div>
+                <h3>사용 통계</h3>
+                <p>자주 방문하는 북마크를 한눈에 확인할 수 있습니다. 방문 횟수와 카테고리별 통계를 제공합니다.</p>
+            </div>
+            <div class="feature-card glass-card">
+                <div class="icon-box">🔍</div>
+                <h3>빠른 검색</h3>
+                <p>북마크가 많아도 검색으로 곧바로 찾을 수 있습니다. 제목과 URL 모두 검색할 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="purpose" class="purpose-section">
+        <div class="purpose-content">
+            <h2 class="section-title">왜 A!rrange를 사용해야 할까요?</h2>
+            <div class="purpose-grid">
+                <div class="purpose-item">
+                    <h3>북마크가 너무 많아요</h3>
+                    <p>수백 개의 북마크가 정리되지 않은 채로 쌓여있나요? A!rrange가 자동으로 관련 북마크를 묶어주어 관리가 쉬워집니다.</p>
+                </div>
+                <div class="purpose-item">
+                    <h3>제목이 너무 길거나<br>애매해요</h3>
+                    <p>웹사이트의 제목이 길거나 의미가 불명확한가요?<br>핵심 키워드를 추출하여 간결하고<br>검색하기 좋은 제목으로 변환합니다.</p>
+                </div>
+                <div class="purpose-item">
+                    <h3>어떤 북마크를 자주 쓰는지<br>알고 싶어요</h3>
+                    <p>자주 방문하는 북마크를 확인하고 싶으신가요?<br>방문 횟수와 통계를 제공하여<br>효율적으로 북마크를 관리할 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="steps-section">
+        <h2 class="section-title">사용 방법</h2>
+        <div class="steps-container">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h3>북마크 추가</h3>
+                <p>크롬 툴바의 A! 아이콘을 클릭하고<br>사이드 패널에서 + 버튼을 눌러<br>현재 페이지를 저장합니다.</p>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h3>자동 처리</h3>
+                <p>페이지 내용을 분석하여 제목을 최적화하고,<br>관련 북마크와 함께 적절한<br>카테고리로 분류합니다.</p>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h3>정리 완료</h3>
+                <p>북마크가 자동으로 정리되어<br>카테고리별로 표시됩니다.<br>검색과 통계 기능을 바로 사용할 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo-section">
+                <img src="logo.png" alt="A!rrange Logo" class="ai-logo">
+                <span class="app-title">A!rrange</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://sites.google.com/view/arrange-privacy-policy" target="_blank">개인정보처리방침</a>
+                <a href="mailto:arrange0319@gmail.com">문의하기</a>
+            </div>
+            <div class="copyright">
+                © 2026 A!rrange Team. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
