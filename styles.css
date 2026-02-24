@@ -63,25 +63,39 @@ body {
     letter-spacing: -0.5px;
 }
 
-.nav-links {
+.nav-tabs {
     display: flex;
     align-items: center;
-    gap: 28px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    gap: 4px;
 }
 
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
+.tab-btn {
+    padding: 8px 20px;
     font-size: 14px;
     font-weight: 500;
-    transition: color 0.2s;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
 }
 
-.nav-links a:hover {
+.tab-btn:hover {
+    color: var(--text-main);
+}
+
+.tab-btn.active {
     color: var(--primary-color);
+    background: rgba(76, 175, 80, 0.15);
+}
+
+.panel {
+    display: none;
+}
+
+.panel.active {
+    display: block;
 }
 
 /* Hero Section */
@@ -452,82 +466,161 @@ body {
     margin-top: 30px;
 }
 
-.how-it-works-cta {
-    text-align: center;
-    padding: 20px 0;
+.video-embed-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 40px;
 }
 
-.cta-youtube {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+.video-embed {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+    background: #000;
 }
 
-.cta-youtube .youtube-icon {
-    font-size: 18px;
-}
-
-/* Patch notes */
-.patch-notes-section {
-    padding: 100px 40px;
-    max-width: 1200px;
+/* Patch notes page (tab panel) */
+.patch-notes-page {
+    padding: 60px 40px 100px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.patch-notes-content {
-    padding: 40px;
-    max-width: 720px;
-    margin: 0 auto;
+.patch-notes-page .section-title {
+    margin-bottom: 40px;
 }
 
-.patch-entry {
-    margin-bottom: 32px;
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 32px;
 }
 
-.patch-entry:last-child {
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    opacity: 0.7;
+}
+
+.timeline-track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    opacity: 0.5;
+}
+
+.timeline-item {
+    position: relative;
     margin-bottom: 0;
 }
 
-.patch-entry h3 {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    color: var(--primary-color);
+.timeline-dot {
+    position: absolute;
+    left: -32px;
+    top: 14px;
+    width: 14px;
+    height: 14px;
+    margin-left: -5px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.timeline-item:first-child .timeline-dot {
+    background: transparent;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.timeline-item.expanded .timeline-dot {
+    background: transparent;
+    box-shadow: 0 0 0 2px var(--primary-color);
+    transform: scale(1.15);
+}
+
+.timeline-item.expanded:not(:first-child) .timeline-dot {
+    background: transparent;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.timeline-item:not(:first-child):not(.expanded) .timeline-dot {
+    background: var(--primary-color);
+}
+
+.timeline-head {
     display: flex;
     align-items: baseline;
     gap: 10px;
+    width: 100%;
+    padding: 12px 0;
+    margin: 0;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.2s;
 }
 
-.patch-entry h3 time {
+.timeline-head:hover {
+    color: var(--primary-hover);
+}
+
+.timeline-head time {
     font-size: 0.9rem;
     font-weight: 400;
     color: var(--text-muted);
 }
 
-.patch-intro {
+.timeline-body {
+    display: none;
+    padding: 0 0 24px 16px;
+    border-left: 1px solid var(--glass-border);
+    margin-left: 6px;
+}
+
+.timeline-item.expanded .timeline-body {
+    display: block;
+}
+
+.timeline-body .patch-intro {
     margin: 0 0 16px 0;
     color: var(--text-muted);
     font-size: 0.95rem;
 }
 
-.patch-subtitle {
+.timeline-body .patch-subtitle {
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-main);
     margin: 20px 0 8px 0;
 }
 
-.patch-subtitle:first-of-type {
+.timeline-body .patch-subtitle:first-of-type {
     margin-top: 0;
 }
 
-.patch-entry ul {
+.timeline-body ul {
     margin: 0 0 8px 0;
     padding-left: 20px;
     color: var(--text-muted);
     line-height: 1.8;
 }
 
-.patch-entry ul ul {
+.timeline-body ul ul {
     margin-top: 4px;
     margin-bottom: 0;
     padding-left: 18px;
@@ -593,14 +686,12 @@ body {
         gap: 12px;
     }
     
-    .nav-links {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 16px;
+    .nav-tabs {
+        gap: 2px;
     }
     
-    .nav-links a {
+    .tab-btn {
+        padding: 6px 14px;
         font-size: 13px;
     }
     
@@ -640,13 +731,24 @@ body {
     
     .features-section,
     .purpose-section,
-    .steps-section,
-    .patch-notes-section {
+    .steps-section {
         padding: 60px 20px;
     }
     
-    .patch-notes-content {
-        padding: 24px 20px;
+    .video-embed-wrap {
+        padding: 20px 20px;
+    }
+    
+    .patch-notes-page {
+        padding: 40px 20px 80px;
+    }
+    
+    .timeline {
+        padding-left: 28px;
+    }
+    
+    .timeline-dot {
+        left: -28px;
     }
     
     .section-title {

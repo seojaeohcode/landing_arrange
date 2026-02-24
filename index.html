@@ -12,185 +12,201 @@
 </head>
 <body>
     <div class="glass-background"></div>
-    
+
     <nav class="navbar">
         <div class="logo-section">
             <img src="logo.png" alt="A!rrange Logo" class="ai-logo">
             <span class="app-title">A!rrange</span>
         </div>
-        <ul class="nav-links">
-            <li><a href="#features">주요 기능</a></li>
-            <li><a href="#purpose">왜 A!rrange?</a></li>
-            <li><a href="#how-it-works">사용 방법</a></li>
-            <li><a href="#patch-notes">패치노트</a></li>
-        </ul>
+        <div class="nav-tabs" role="tablist">
+            <button type="button" class="tab-btn active" data-tab="main" role="tab" aria-selected="true">메인</button>
+            <button type="button" class="tab-btn" data-tab="patch" role="tab" aria-selected="false">패치노트</button>
+        </div>
         <a href="https://chromewebstore.google.com/detail/arrange-smart-bookmark/kdablbabmkclbagbfoebkcginjhphcmi" target="_blank" rel="noopener noreferrer" class="cta-button header-cta">
             <span class="chrome-icon">🌐</span>
             <span>Chrome에 추가</span>
         </a>
     </nav>
 
-    <header class="hero-section">
-        <div class="hero-content">
-            <div class="badge">북마크 관리의 새로운 방식</div>
-            <h1 class="hero-title">북마크를<br><span class="gradient-text">스마트하게</span> 정리하세요</h1>
-            <p class="hero-subtitle">수백 개의 북마크로 지친가요?<br>A!rrange가 자동으로 제목을 최적화하고,<br>관련 북마크를 묶어주며, 사용 통계까지 제공합니다.</p>
-            <div class="hero-buttons">
-                <a href="https://chromewebstore.google.com/detail/arrange-smart-bookmark/kdablbabmkclbagbfoebkcginjhphcmi" target="_blank" rel="noopener noreferrer" class="cta-button primary">Chrome에 추가 - 무료</a>
-                <a href="#how-it-works" class="cta-button secondary">사용 방법</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <!-- 실제 UI를 반영한 프리뷰 -->
-            <div class="ui-card glass-card float-animation">
-                <div class="ui-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
+    <div id="panel-main" class="panel active" role="tabpanel">
+        <header class="hero-section">
+            <div class="hero-content">
+                <div class="badge">북마크 관리의 새로운 방식</div>
+                <h1 class="hero-title">북마크를<br><span class="gradient-text">스마트하게</span> 정리하세요</h1>
+                <p class="hero-subtitle">수백 개의 북마크로 지친가요?<br>A!rrange가 자동으로 제목을 최적화하고,<br>관련 북마크를 묶어주며, 사용 통계까지 제공합니다.</p>
+                <div class="hero-buttons">
+                    <a href="https://chromewebstore.google.com/detail/arrange-smart-bookmark/kdablbabmkclbagbfoebkcginjhphcmi" target="_blank" rel="noopener noreferrer" class="cta-button primary">Chrome에 추가 - 무료</a>
                 </div>
-                <div class="bookmark-list">
-                    <div class="category-header">
-                        <span class="folder-icon">📁</span> 웹 개발
+            </div>
+            <div class="hero-visual">
+                <div class="ui-card glass-card float-animation">
+                    <div class="ui-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
                     </div>
-                    <div class="bookmark-item">
-                        <div class="fill-bar" style="width: 85%"></div>
-                        <div class="bm-content">
-                            <div class="bm-title">React 공식 문서</div>
-                            <div class="bm-url">react.dev</div>
+                    <div class="bookmark-list">
+                        <div class="category-header">
+                            <span class="folder-icon">📁</span> 웹 개발
                         </div>
-                        <div class="visit-count">12</div>
-                    </div>
-                    <div class="bookmark-item">
-                        <div class="fill-bar" style="width: 60%"></div>
-                        <div class="bm-content">
-                            <div class="bm-title">TypeScript 가이드</div>
-                            <div class="bm-url">typescriptlang.org</div>
+                        <div class="bookmark-item">
+                            <div class="fill-bar" style="width: 85%"></div>
+                            <div class="bm-content">
+                                <div class="bm-title">React 공식 문서</div>
+                                <div class="bm-url">react.dev</div>
+                            </div>
+                            <div class="visit-count">12</div>
                         </div>
-                        <div class="visit-count">8</div>
-                    </div>
-                    <div class="category-header" style="margin-top: 16px;">
-                        <span class="folder-icon">📁</span> 디자인
-                    </div>
-                    <div class="bookmark-item">
-                        <div class="fill-bar" style="width: 45%"></div>
-                        <div class="bm-content">
-                            <div class="bm-title">Figma 튜토리얼</div>
-                            <div class="bm-url">figma.com</div>
+                        <div class="bookmark-item">
+                            <div class="fill-bar" style="width: 60%"></div>
+                            <div class="bm-content">
+                                <div class="bm-title">TypeScript 가이드</div>
+                                <div class="bm-url">typescriptlang.org</div>
+                            </div>
+                            <div class="visit-count">8</div>
                         </div>
-                        <div class="visit-count">5</div>
+                        <div class="category-header" style="margin-top: 16px;">
+                            <span class="folder-icon">📁</span> 디자인
+                        </div>
+                        <div class="bookmark-item">
+                            <div class="fill-bar" style="width: 45%"></div>
+                            <div class="bm-content">
+                                <div class="bm-title">Figma 튜토리얼</div>
+                                <div class="bm-url">figma.com</div>
+                            </div>
+                            <div class="visit-count">5</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section id="features" class="features-section">
-        <h2 class="section-title">주요 기능</h2>
-        <div class="features-grid">
-            <div class="feature-card glass-card">
-                <div class="icon-box">✏️</div>
-                <h3>스마트 제목 생성</h3>
-                <p>긴 제목을 간결하고 검색하기 좋게 자동 변환합니다. 핵심 키워드는 유지한 채 읽기 쉽게 다듬어 줍니다.</p>
-            </div>
-            <div class="feature-card glass-card">
-                <div class="icon-box">📂</div>
-                <h3>자동 카테고리 분류</h3>
-                <p>폴더를 직접 만들 필요 없이, 관련 북마크끼리 알아서 묶어 줍니다. 정리가 한결 수월해집니다.</p>
-            </div>
-            <div class="feature-card glass-card">
-                <div class="icon-box">📈</div>
-                <h3>사용 통계</h3>
-                <p>자주 방문하는 북마크를 한눈에 확인할 수 있습니다. 방문 횟수와 카테고리별 통계를 제공합니다.</p>
-            </div>
-            <div class="feature-card glass-card">
-                <div class="icon-box">🔍</div>
-                <h3>빠른 검색</h3>
-                <p>북마크가 많아도 검색으로 곧바로 찾을 수 있습니다. 제목과 URL 모두 검색할 수 있습니다.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="purpose" class="purpose-section">
-        <div class="purpose-content">
-            <h2 class="section-title">왜 A!rrange를 사용해야 할까요?</h2>
-            <div class="purpose-grid">
-                <div class="purpose-item">
-                    <h3>북마크가 너무 많아요</h3>
-                    <p>수백 개의 북마크가 정리되지 않은 채로 쌓여있나요? A!rrange가 자동으로 관련 북마크를 묶어주어 관리가 쉬워집니다.</p>
+        <section class="features-section">
+            <h2 class="section-title">주요 기능</h2>
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="icon-box">✏️</div>
+                    <h3>스마트 제목 생성</h3>
+                    <p>긴 제목을 간결하고 검색하기 좋게 자동 변환합니다. 핵심 키워드는 유지한 채 읽기 쉽게 다듬어 줍니다.</p>
                 </div>
-                <div class="purpose-item">
-                    <h3>제목이 너무 길거나<br>애매해요</h3>
-                    <p>웹사이트의 제목이 길거나 의미가 불명확한가요?<br>핵심 키워드를 추출하여 간결하고<br>검색하기 좋은 제목으로 변환합니다.</p>
+                <div class="feature-card glass-card">
+                    <div class="icon-box">📂</div>
+                    <h3>자동 카테고리 분류</h3>
+                    <p>폴더를 직접 만들 필요 없이, 관련 북마크끼리 알아서 묶어 줍니다. 정리가 한결 수월해집니다.</p>
                 </div>
-                <div class="purpose-item">
-                    <h3>어떤 북마크를 자주 쓰는지<br>알고 싶어요</h3>
-                    <p>자주 방문하는 북마크를 확인하고 싶으신가요?<br>방문 횟수와 통계를 제공하여<br>효율적으로 북마크를 관리할 수 있습니다.</p>
+                <div class="feature-card glass-card">
+                    <div class="icon-box">📈</div>
+                    <h3>사용 통계</h3>
+                    <p>자주 방문하는 북마크를 한눈에 확인할 수 있습니다. 방문 횟수와 카테고리별 통계를 제공합니다.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon-box">🔍</div>
+                    <h3>빠른 검색</h3>
+                    <p>북마크가 많아도 검색으로 곧바로 찾을 수 있습니다. 제목과 URL 모두 검색할 수 있습니다.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="how-it-works" class="steps-section">
-        <h2 class="section-title">사용 방법</h2>
-        <div class="how-it-works-cta">
-            <a href="https://www.youtube.com/watch?v=usRzLRXmz3I" target="_blank" rel="noopener noreferrer" class="cta-button primary cta-youtube">
-                <span class="youtube-icon">▶</span>
-                <span>사용 방법 영상 보기</span>
-            </a>
-        </div>
-    </section>
+        <section class="purpose-section">
+            <div class="purpose-content">
+                <h2 class="section-title">왜 A!rrange를 사용해야 할까요?</h2>
+                <div class="purpose-grid">
+                    <div class="purpose-item">
+                        <h3>북마크가 너무 많아요</h3>
+                        <p>수백 개의 북마크가 정리되지 않은 채로 쌓여있나요? A!rrange가 자동으로 관련 북마크를 묶어주어 관리가 쉬워집니다.</p>
+                    </div>
+                    <div class="purpose-item">
+                        <h3>제목이 너무 길거나<br>애매해요</h3>
+                        <p>웹사이트의 제목이 길거나 의미가 불명확한가요?<br>핵심 키워드를 추출하여 간결하고<br>검색하기 좋은 제목으로 변환합니다.</p>
+                    </div>
+                    <div class="purpose-item">
+                        <h3>어떤 북마크를 자주 쓰는지<br>알고 싶어요</h3>
+                        <p>자주 방문하는 북마크를 확인하고 싶으신가요?<br>방문 횟수와 통계를 제공하여<br>효율적으로 북마크를 관리할 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="patch-notes" class="patch-notes-section">
-        <h2 class="section-title">패치노트</h2>
-        <div class="patch-notes-content glass-card">
-            <article class="patch-entry">
-                <h3>v1.1.0 <time datetime="2026-02">2026.02</time></h3>
-                <p class="patch-intro">v1.1.0 업데이트 및 UI/UX 개선 내역입니다.</p>
-                <h4 class="patch-subtitle">1. 신규 기능</h4>
-                <ul>
-                    <li><strong>죽은 링크(Dead Link) 검사</strong>: 접속 불가능한 북마크 식별 및 선택 삭제 기능 추가</li>
-                    <li><strong>북마크 데이터 백업</strong>: 로컬 파일 백업 및 내보내기 기능 구현</li>
-                    <li><strong>폴더 관리 편의성 강화</strong>:
+        <section class="steps-section">
+            <h2 class="section-title">사용 방법</h2>
+            <div class="video-embed-wrap">
+                <iframe class="video-embed" src="https://www.youtube.com/embed/usRzLRXmz3I" title="A!rrange 사용 방법" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+    </div>
+
+    <div id="panel-patch" class="panel" role="tabpanel" hidden>
+        <section class="patch-notes-page">
+            <h2 class="section-title">패치노트</h2>
+            <div class="timeline">
+                <div class="timeline-track"></div>
+                <article class="timeline-item" data-version>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <button type="button" class="timeline-head" aria-expanded="false">
+                        <span class="timeline-version">v1.1.0</span>
+                        <time datetime="2026-02">2026.02</time>
+                    </button>
+                    <div class="timeline-body">
+                        <p class="patch-intro">v1.1.0 업데이트 및 UI/UX 개선 내역입니다.</p>
+                        <h4 class="patch-subtitle">1. 신규 기능</h4>
                         <ul>
-                            <li>폴더 삭제 시 내부 북마크 처리 방식(미분류 이동 또는 전체 삭제) 선택 기능 추가</li>
-                            <li>폴더 내 모든 북마크를 새 탭으로 한 번에 열기 기능 추가</li>
+                            <li><strong>죽은 링크(Dead Link) 검사</strong>: 접속 불가능한 북마크 식별 및 선택 삭제 기능 추가</li>
+                            <li><strong>북마크 데이터 백업</strong>: 로컬 파일 백업 및 내보내기 기능 구현</li>
+                            <li><strong>폴더 관리 편의성 강화</strong>:
+                                <ul>
+                                    <li>폴더 삭제 시 내부 북마크 처리 방식(미분류 이동 또는 전체 삭제) 선택 기능 추가</li>
+                                    <li>폴더 내 모든 북마크를 새 탭으로 한 번에 열기 기능 추가</li>
+                                </ul>
+                            </li>
+                            <li><strong>일괄 북마크 저장</strong>: 현재 열려 있는 모든 탭을 한꺼번에 북마크로 저장하는 기능 구현</li>
+                            <li><strong>공지사항 시스템</strong>: 상단 알림 아이콘을 통한 업데이트 및 새 소식 확인 기능 도입</li>
                         </ul>
-                    </li>
-                    <li><strong>일괄 북마크 저장</strong>: 현재 열려 있는 모든 탭을 한꺼번에 북마크로 저장하는 기능 구현</li>
-                    <li><strong>공지사항 시스템</strong>: 상단 알림 아이콘을 통한 업데이트 및 새 소식 확인 기능 도입</li>
-                </ul>
-                <h4 class="patch-subtitle">2. UI/UX 개선</h4>
-                <ul>
-                    <li><strong>디자인 리뉴얼</strong>: 설정 페이지 및 대시보드 레이아웃 직관적 재구성</li>
-                    <li><strong>커스텀 모달 적용</strong>: 브라우저 기본 알림창을 Arrange 전용 모달로 교체하여 시각적 일관성 확보</li>
-                    <li><strong>용어 체계 정립</strong>: 기존 '카테고리' 명칭을 '폴더'로 일괄 변경</li>
-                    <li><strong>레이아웃 최적화</strong>: 반응형 스타일 조정 및 불필요한 스크롤 제거</li>
-                </ul>
-                <h4 class="patch-subtitle">3. 주요 버그 수정</h4>
-                <ul>
-                    <li>검색 결과에서 관련 없는 빈 폴더가 노출되는 현상 수정</li>
-                    <li>특정 상황에서 북마크가 '미분류'로 오분류되는 현상 해결</li>
-                    <li>북마크 재가져오기 시 기존 데이터 초기화 및 중복 색상 표시 오류 수정</li>
-                    <li>모달 내 텍스트 줄바꿈 및 알림창 잘림 현상 수정</li>
-                </ul>
-            </article>
-            <article class="patch-entry">
-                <h3>v1.0.1 <time datetime="2026-02-11">2026.02.11</time></h3>
-                <ul>
-                    <li>안정성 및 사용성 개선</li>
-                </ul>
-            </article>
-            <article class="patch-entry">
-                <h3>v1.0.0 <time datetime="2026-01-01">2026.01</time></h3>
-                <ul>
-                    <li>스마트 제목 요약</li>
-                    <li>자동 카테고리 분류</li>
-                    <li>드래그 앤 드롭 정리</li>
-                    <li>다크 모드, 사용 통계, 빠른 검색</li>
-                </ul>
-            </article>
-        </div>
-    </section>
+                        <h4 class="patch-subtitle">2. UI/UX 개선</h4>
+                        <ul>
+                            <li><strong>디자인 리뉴얼</strong>: 설정 페이지 및 대시보드 레이아웃 직관적 재구성</li>
+                            <li><strong>커스텀 모달 적용</strong>: 브라우저 기본 알림창을 Arrange 전용 모달로 교체하여 시각적 일관성 확보</li>
+                            <li><strong>용어 체계 정립</strong>: 기존 '카테고리' 명칭을 '폴더'로 일괄 변경</li>
+                            <li><strong>레이아웃 최적화</strong>: 반응형 스타일 조정 및 불필요한 스크롤 제거</li>
+                        </ul>
+                        <h4 class="patch-subtitle">3. 주요 버그 수정</h4>
+                        <ul>
+                            <li>검색 결과에서 관련 없는 빈 폴더가 노출되는 현상 수정</li>
+                            <li>특정 상황에서 북마크가 '미분류'로 오분류되는 현상 해결</li>
+                            <li>북마크 재가져오기 시 기존 데이터 초기화 및 중복 색상 표시 오류 수정</li>
+                            <li>모달 내 텍스트 줄바꿈 및 알림창 잘림 현상 수정</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item" data-version>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <button type="button" class="timeline-head" aria-expanded="false">
+                        <span class="timeline-version">v1.0.1</span>
+                        <time datetime="2026-02-11">2026.02.11</time>
+                    </button>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>안정성 및 사용성 개선</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item" data-version>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <button type="button" class="timeline-head" aria-expanded="false">
+                        <span class="timeline-version">v1.0.0</span>
+                        <time datetime="2026-01-01">2026.01</time>
+                    </button>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>스마트 제목 요약</li>
+                            <li>자동 카테고리 분류</li>
+                            <li>드래그 앤 드롭 정리</li>
+                            <li>다크 모드, 사용 통계, 빠른 검색</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
