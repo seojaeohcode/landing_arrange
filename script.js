@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Select elements to animate
-    const animatedElements = document.querySelectorAll('.feature-card, .step-item, .purpose-item, .hero-content');
+    const animatedElements = document.querySelectorAll('.feature-card, .purpose-item, .hero-content, .how-it-works-cta, .patch-entry');
 
     animatedElements.forEach((el, index) => {
         el.style.opacity = '0';

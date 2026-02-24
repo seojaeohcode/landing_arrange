@@ -63,6 +63,27 @@ body {
     letter-spacing: -0.5px;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
 /* Hero Section */
 .hero-section {
     display: flex;
@@ -431,6 +452,88 @@ body {
     margin-top: 30px;
 }
 
+.how-it-works-cta {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cta-youtube {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-youtube .youtube-icon {
+    font-size: 18px;
+}
+
+/* Patch notes */
+.patch-notes-section {
+    padding: 100px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.patch-notes-content {
+    padding: 40px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.patch-entry {
+    margin-bottom: 32px;
+}
+
+.patch-entry:last-child {
+    margin-bottom: 0;
+}
+
+.patch-entry h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.patch-entry h3 time {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.patch-intro {
+    margin: 0 0 16px 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.patch-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 20px 0 8px 0;
+}
+
+.patch-subtitle:first-of-type {
+    margin-top: 0;
+}
+
+.patch-entry ul {
+    margin: 0 0 8px 0;
+    padding-left: 20px;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.patch-entry ul ul {
+    margin-top: 4px;
+    margin-bottom: 0;
+    padding-left: 18px;
+    list-style: circle;
+}
+
 /* Footer */
 .footer {
     padding: 60px 40px;
@@ -486,6 +589,19 @@ body {
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+    }
+    
+    .nav-links a {
+        font-size: 13px;
     }
     
     .cta-button.header-cta {
@@ -524,8 +640,13 @@ body {
     
     .features-section,
     .purpose-section,
-    .steps-section {
+    .steps-section,
+    .patch-notes-section {
         padding: 60px 20px;
+    }
+    
+    .patch-notes-content {
+        padding: 24px 20px;
     }
     
     .section-title {

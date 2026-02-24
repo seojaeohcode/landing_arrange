@@ -18,7 +18,13 @@
             <img src="logo.png" alt="A!rrange Logo" class="ai-logo">
             <span class="app-title">A!rrange</span>
         </div>
-        <a href="https://chrome.google.com/webstore" target="_blank" class="cta-button header-cta">
+        <ul class="nav-links">
+            <li><a href="#features">주요 기능</a></li>
+            <li><a href="#purpose">왜 A!rrange?</a></li>
+            <li><a href="#how-it-works">사용 방법</a></li>
+            <li><a href="#patch-notes">패치노트</a></li>
+        </ul>
+        <a href="https://chromewebstore.google.com/detail/arrange-smart-bookmark/kdablbabmkclbagbfoebkcginjhphcmi" target="_blank" rel="noopener noreferrer" class="cta-button header-cta">
             <span class="chrome-icon">🌐</span>
             <span>Chrome에 추가</span>
         </a>
@@ -30,7 +36,7 @@
             <h1 class="hero-title">북마크를<br><span class="gradient-text">스마트하게</span> 정리하세요</h1>
             <p class="hero-subtitle">수백 개의 북마크로 지친가요?<br>A!rrange가 자동으로 제목을 최적화하고,<br>관련 북마크를 묶어주며, 사용 통계까지 제공합니다.</p>
             <div class="hero-buttons">
-                <a href="https://chrome.google.com/webstore" target="_blank" class="cta-button primary">Chrome에 추가 - 무료</a>
+                <a href="https://chromewebstore.google.com/detail/arrange-smart-bookmark/kdablbabmkclbagbfoebkcginjhphcmi" target="_blank" rel="noopener noreferrer" class="cta-button primary">Chrome에 추가 - 무료</a>
                 <a href="#how-it-works" class="cta-button secondary">사용 방법</a>
             </div>
         </div>
@@ -126,24 +132,63 @@
 
     <section id="how-it-works" class="steps-section">
         <h2 class="section-title">사용 방법</h2>
-        <div class="steps-container">
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <h3>북마크 추가</h3>
-                <p>크롬 툴바의 A! 아이콘을 클릭하고<br>사이드 패널에서 + 버튼을 눌러<br>현재 페이지를 저장합니다.</p>
-            </div>
-            <div class="step-arrow">→</div>
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <h3>자동 처리</h3>
-                <p>페이지 내용을 분석하여 제목을 최적화하고,<br>관련 북마크와 함께 적절한<br>카테고리로 분류합니다.</p>
-            </div>
-            <div class="step-arrow">→</div>
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <h3>정리 완료</h3>
-                <p>북마크가 자동으로 정리되어<br>카테고리별로 표시됩니다.<br>검색과 통계 기능을 바로 사용할 수 있습니다.</p>
-            </div>
+        <div class="how-it-works-cta">
+            <a href="https://www.youtube.com/watch?v=usRzLRXmz3I" target="_blank" rel="noopener noreferrer" class="cta-button primary cta-youtube">
+                <span class="youtube-icon">▶</span>
+                <span>사용 방법 영상 보기</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="patch-notes" class="patch-notes-section">
+        <h2 class="section-title">패치노트</h2>
+        <div class="patch-notes-content glass-card">
+            <article class="patch-entry">
+                <h3>v1.1.0 <time datetime="2026-02">2026.02</time></h3>
+                <p class="patch-intro">v1.1.0 업데이트 및 UI/UX 개선 내역입니다.</p>
+                <h4 class="patch-subtitle">1. 신규 기능</h4>
+                <ul>
+                    <li><strong>죽은 링크(Dead Link) 검사</strong>: 접속 불가능한 북마크 식별 및 선택 삭제 기능 추가</li>
+                    <li><strong>북마크 데이터 백업</strong>: 로컬 파일 백업 및 내보내기 기능 구현</li>
+                    <li><strong>폴더 관리 편의성 강화</strong>:
+                        <ul>
+                            <li>폴더 삭제 시 내부 북마크 처리 방식(미분류 이동 또는 전체 삭제) 선택 기능 추가</li>
+                            <li>폴더 내 모든 북마크를 새 탭으로 한 번에 열기 기능 추가</li>
+                        </ul>
+                    </li>
+                    <li><strong>일괄 북마크 저장</strong>: 현재 열려 있는 모든 탭을 한꺼번에 북마크로 저장하는 기능 구현</li>
+                    <li><strong>공지사항 시스템</strong>: 상단 알림 아이콘을 통한 업데이트 및 새 소식 확인 기능 도입</li>
+                </ul>
+                <h4 class="patch-subtitle">2. UI/UX 개선</h4>
+                <ul>
+                    <li><strong>디자인 리뉴얼</strong>: 설정 페이지 및 대시보드 레이아웃 직관적 재구성</li>
+                    <li><strong>커스텀 모달 적용</strong>: 브라우저 기본 알림창을 Arrange 전용 모달로 교체하여 시각적 일관성 확보</li>
+                    <li><strong>용어 체계 정립</strong>: 기존 '카테고리' 명칭을 '폴더'로 일괄 변경</li>
+                    <li><strong>레이아웃 최적화</strong>: 반응형 스타일 조정 및 불필요한 스크롤 제거</li>
+                </ul>
+                <h4 class="patch-subtitle">3. 주요 버그 수정</h4>
+                <ul>
+                    <li>검색 결과에서 관련 없는 빈 폴더가 노출되는 현상 수정</li>
+                    <li>특정 상황에서 북마크가 '미분류'로 오분류되는 현상 해결</li>
+                    <li>북마크 재가져오기 시 기존 데이터 초기화 및 중복 색상 표시 오류 수정</li>
+                    <li>모달 내 텍스트 줄바꿈 및 알림창 잘림 현상 수정</li>
+                </ul>
+            </article>
+            <article class="patch-entry">
+                <h3>v1.0.1 <time datetime="2026-02-11">2026.02.11</time></h3>
+                <ul>
+                    <li>안정성 및 사용성 개선</li>
+                </ul>
+            </article>
+            <article class="patch-entry">
+                <h3>v1.0.0 <time datetime="2026-01-01">2026.01</time></h3>
+                <ul>
+                    <li>스마트 제목 요약</li>
+                    <li>자동 카테고리 분류</li>
+                    <li>드래그 앤 드롭 정리</li>
+                    <li>다크 모드, 사용 통계, 빠른 검색</li>
+                </ul>
+            </article>
         </div>
     </section>
 
