@@ -143,37 +143,68 @@
                 <article class="timeline-item" data-version>
                     <div class="timeline-dot" aria-hidden="true"></div>
                     <button type="button" class="timeline-head" aria-expanded="false">
+                        <span class="timeline-version">v1.2.0</span>
+                        <time datetime="2026-03">2026.03</time>
+                    </button>
+                    <div class="timeline-body">
+                        <p class="patch-intro">이번 업데이트에서 추가·개선된 내용이에요.</p>
+                        <h4 class="patch-subtitle">✨ 새로 생긴 것들</h4>
+                        <ul>
+                            <li><strong>피드백·후원 버튼</strong> — 오른쪽 아래에 ✉️(의견/버그 제보), ☕️(후원) 버튼이 생겼어요. 불편한 점이나 아이디어를 편하게 보내주세요.</li>
+                            <li><strong>한 번에 더 많이 정리</strong> — 아직 분류 안 된 북마크를 이전 100개에서 <strong>500개까지</strong> 한 번에 AI가 정리해줘요.</li>
+                            <li><strong>중복 북마크 방지</strong> — 같은 주소의 북마크가 두 번 쌓이지 않도록 막아요. 중복일 때 안내 문구도 띄워줘요.</li>
+                        </ul>
+                        <h4 class="patch-subtitle">🔧 고쳐진 것들</h4>
+                        <ul>
+                            <li>북마크를 클릭해도 <strong>방문 횟수</strong>가 안 올라가던 문제를 수정했어요.</li>
+                            <li>북마크가 많을 때 <strong>오류나 멈춤</strong>이 나오던 현상을 줄였어요.</li>
+                            <li>죽은 링크 검사 등에서 <strong>창이 갑자기 닫히던</strong> 현상을 고쳤어요.</li>
+                        </ul>
+                        <h4 class="patch-subtitle">💡 더 편해진 점</h4>
+                        <ul>
+                            <li>여러 창이 겹쳐 보이던 걸 정리해서 <strong>화면이 더 깔끔</strong>해졌어요.</li>
+                            <li>죽은 링크 검사 버튼을 다른 버튼들과 <strong>스타일을 맞춰</strong> 통일감을 줬어요.</li>
+                            <li>피드백·후원 버튼을 <strong>누르기 쉽고 보기 좋게</strong> 다듬었어요.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="timeline-item" data-version>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <button type="button" class="timeline-head" aria-expanded="false">
                         <span class="timeline-version">v1.1.0</span>
                         <time datetime="2026-02">2026.02</time>
                     </button>
                     <div class="timeline-body">
-                        <p class="patch-intro">v1.1.0 업데이트 및 UI/UX 개선 내역입니다.</p>
-                        <h4 class="patch-subtitle">1. 신규 기능</h4>
+                        <p class="patch-intro">이번 업데이트에서 추가·개선된 내용이에요.</p>
+                        <h4 class="patch-subtitle">✨ 새로 생긴 것들</h4>
                         <ul>
-                            <li><strong>죽은 링크(Dead Link) 검사</strong>: 접속 불가능한 북마크 식별 및 선택 삭제 기능 추가</li>
-                            <li><strong>북마크 데이터 백업</strong>: 로컬 파일 백업 및 내보내기 기능 구현</li>
-                            <li><strong>폴더 관리 편의성 강화</strong>:
+                            <li><strong>죽은 링크 검사</strong> — 더 이상 열리지 않는 북마크를 찾아서 골라 삭제할 수 있어요.</li>
+                            <li><strong>북마크 백업</strong> — 북마크 목록을 파일로 저장해 두었다가 나중에 다시 불러올 수 있어요.</li>
+                            <li><strong>폴더 관리가 더 쉬워졌어요</strong>
                                 <ul>
-                                    <li>폴더 삭제 시 내부 북마크 처리 방식(미분류 이동 또는 전체 삭제) 선택 기능 추가</li>
-                                    <li>폴더 내 모든 북마크를 새 탭으로 한 번에 열기 기능 추가</li>
+                                    <li>폴더를 지울 때, 안에 있는 북마크를 «미분류로 보내기» vs «함께 삭제» 중에서 고를 수 있어요.</li>
+                                    <li>폴더 안 북마크를 <strong>한 번에 새 탭으로</strong> 열 수 있어요.</li>
                                 </ul>
                             </li>
-                            <li><strong>일괄 북마크 저장</strong>: 현재 열려 있는 모든 탭을 한꺼번에 북마크로 저장하는 기능 구현</li>
-                            <li><strong>공지사항 시스템</strong>: 상단 알림 아이콘을 통한 업데이트 및 새 소식 확인 기능 도입</li>
+                            <li><strong>탭 한 번에 저장</strong> — 지금 열려 있는 탭을 한 번에 전부 북마크로 저장할 수 있어요.</li>
+                            <li><strong>공지 알림</strong> — 상단 알림으로 업데이트 소식과 새 소식을 확인할 수 있어요.</li>
                         </ul>
-                        <h4 class="patch-subtitle">2. UI/UX 개선</h4>
+                        <h4 class="patch-subtitle">💡 더 편해진 점</h4>
                         <ul>
-                            <li><strong>디자인 리뉴얼</strong>: 설정 페이지 및 대시보드 레이아웃 직관적 재구성</li>
-                            <li><strong>커스텀 모달 적용</strong>: 브라우저 기본 알림창을 Arrange 전용 모달로 교체하여 시각적 일관성 확보</li>
-                            <li><strong>용어 체계 정립</strong>: 기존 '카테고리' 명칭을 '폴더'로 일괄 변경</li>
-                            <li><strong>레이아웃 최적화</strong>: 반응형 스타일 조정 및 불필요한 스크롤 제거</li>
+                            <li>설정 화면과 대시보드를 <strong>더 알아보기 쉽게</strong> 바꿨어요.</li>
+                            <li>알림 창을 A!rrange 스타일에 맞게 통일했어요.</li>
+                            <li>«카테고리» 대신 <strong>«폴더»</strong>로 통일해서 보여줘요.</li>
+                            <li>화면 크기에 맞게 잘 보이도록, 불필요한 스크롤이 덜 나오도록 손봤어요.</li>
                         </ul>
-                        <h4 class="patch-subtitle">3. 주요 버그 수정</h4>
+                        <h4 class="patch-subtitle">🔧 고쳐진 것들</h4>
                         <ul>
-                            <li>검색 결과에서 관련 없는 빈 폴더가 노출되는 현상 수정</li>
-                            <li>특정 상황에서 북마크가 '미분류'로 오분류되는 현상 해결</li>
-                            <li>북마크 재가져오기 시 기존 데이터 초기화 및 중복 색상 표시 오류 수정</li>
-                            <li>모달 내 텍스트 줄바꿈 및 알림창 잘림 현상 수정</li>
+                            <li>검색했을 때 <strong>빈 폴더</strong>가 섞여 나오던 걸 고쳤어요.</li>
+                            <li>어떤 북마크가 잘못 «미분류»로 들어가던 문제를 수정했어요.</li>
+                            <li>북마크를 다시 불러올 때 <strong>데이터가 사라지거나 색이 겹쳐 보이던</strong> 걸 고쳤어요.</li>
+                            <li>알림 창 안 글자가 <strong>잘리거나 줄바꿈</strong>이 이상하던 걸 수정했어요.</li>
+                            <li>오래 켜 두면 <strong>느려지던 현상</strong>을 줄였어요.</li>
+                            <li>정리 후 새로 생긴 폴더가 <strong>화면에 바로 반영되지 않던</strong> 문제를 고쳤어요.</li>
+                            <li>AI 정리 중간에 <strong>오류가 나던</strong> 현상을 수정했어요.</li>
                         </ul>
                     </div>
                 </article>
@@ -185,7 +216,7 @@
                     </button>
                     <div class="timeline-body">
                         <ul>
-                            <li>안정성 및 사용성 개선</li>
+                            <li>더 안정적으로, 쓰기 편하게 손봤어요.</li>
                         </ul>
                     </div>
                 </article>
@@ -197,10 +228,10 @@
                     </button>
                     <div class="timeline-body">
                         <ul>
-                            <li>스마트 제목 요약</li>
-                            <li>자동 카테고리 분류</li>
-                            <li>드래그 앤 드롭 정리</li>
-                            <li>다크 모드, 사용 통계, 빠른 검색</li>
+                            <li>긴 제목을 핵심만 남겨 <strong>스마트하게 요약</strong></li>
+                            <li>북마크를 <strong>자동으로 폴더에 분류</strong></li>
+                            <li><strong>드래그해서</strong> 순서·폴더 마음대로 정리</li>
+                            <li>다크 모드, 방문 통계, 빠른 검색</li>
                         </ul>
                     </div>
                 </article>
